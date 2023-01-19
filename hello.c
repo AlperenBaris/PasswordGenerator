@@ -27,6 +27,7 @@ int main()
 
                 isfinish = 1;
                 password[prevrnd] = "";
+                continue;
             }
             
             if(strlen(password[rndn1]) > 10 - j)
@@ -39,14 +40,9 @@ int main()
                 }
 
                 j += 10 - j;
-
-                if(strlen(password[rndn1]) != z + 1)
-                {
-                    isfinish = 0;
-                    a = z + 1;
-                    prevrnd = rndn1;
-                }
-
+                isfinish = 0;
+                a = z + 1;
+                prevrnd = rndn1;
             }
             else if (password[rndn1] == "")
             {
